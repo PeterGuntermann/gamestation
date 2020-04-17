@@ -1,6 +1,13 @@
 # gamestation
 Just a simple game service.
 
+# Notizen
+
++ Das Tutorial hier hilft: 
+    - https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates
++ Axios-Tutorial:
+    - https://www.youtube.com/watch?v=6LyagkoRWYA
+
 ## how to use
 + Enter the server via `ssh <user>@<host>`.
 + Move to the correct directory.
