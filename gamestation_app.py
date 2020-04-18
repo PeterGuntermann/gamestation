@@ -20,7 +20,6 @@ def lobby():
 def set_username():
     payload = request.json
     if payload is not None:
-        # user.set_name(payload["username"])
         users.append(payload["username"])
         return Response(status=200)
 
