@@ -21,6 +21,7 @@ Just a simple game service.
 + Activate the environment: `venv\Scripts\activate` (Windows 10)
 + Install packages: `pip install <package>`
     - `flask`
+    - `python-dotenv`
 
 ## Run dev server
 ### Using a PyCharm run config
