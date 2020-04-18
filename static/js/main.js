@@ -1,17 +1,18 @@
 
-function getSomething() {
-    console.log("Get something.");
-    axios.get("/foobar")
-    .then(res => console.log(res))
-    .catch(err => console.error(err));
+function setUsername() {
+    axios.post(
+        "/set-username",
+        {
+            username: usernameInput.value
+        })
+        .then(res => {
+            console.log(res);
+            window.location.replace("/lobby")
+        })
+        .catch(err => console.error(err));
 }
 
-function postSomething() {
-    console.log("Post something.");
-    axios.post("/foobar", { foo: "bar" })
-    .then(res => console.log(res))
-    .catch(err => console.error(err));
-}
-
-document.getElementById("get-button").addEventListener("click", getSomething)
-document.getElementById("post-button").addEventListener("click", postSomething)
+const setUsernameButton = document.getElementById("set-username-button");
+setUsernameButton.addEventListener("click", setUsername);
+const usernameInput = document.getElementById("username-input");
+// const username = usernameInput.value;

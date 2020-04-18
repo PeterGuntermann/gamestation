@@ -1,3 +1,7 @@
-.welcome {
-    text-align: center;
+.page {
+    padding: 1rem
+}
+
+.form-group input {
+    margin-bottom: 1rem;
 }

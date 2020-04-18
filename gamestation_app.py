@@ -1,21 +1,28 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, Response
 
 app = Flask(__name__)
 
+users = []
+
 
 @app.route("/")
-def index():
-    return render_template("main_page.html", user="Fremder")
+@app.route("/welcome")
+def welcome():
+    return render_template("welcome.html")
 
 
-@app.route("/foobar", methods=("GET",))
-def getFoobar():
-    return "foo"
+@app.route("/lobby")
+def lobby():
+    return render_template("lobby.html", users=users)
 
 
-@app.route("/foobar", methods=("POST",))
-def postFoobar():
-    return "bar"
+@app.route("/set-username", methods=("POST",))
+def set_username():
+    payload = request.json
+    if payload is not None:
+        # user.set_name(payload["username"])
+        users.append(payload["username"])
+        return Response(status=200)
 
 
 if __name__ == '__main__':
