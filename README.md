@@ -22,6 +22,7 @@ Just a simple game service.
 + Install packages: `pip install <package>`
     - `flask`
     - `python-dotenv`
+    - `flask-wtf`
 
 ## Run dev server
 ### Using a PyCharm run config
